@@ -4,16 +4,19 @@ const journals = [
   {
     name: 'Lavender',
     description: 'Calming lavender-infused pages for a peaceful writing ritual.',
+    tagline: 'Why lavender? Known to ease stress and quiet the mind before sleep.',
     price: '$18',
   },
   {
     name: 'Vanilla',
     description: 'Warm vanilla scent that turns journaling into a cozy escape.',
+    tagline: 'Why vanilla? A comforting scent that makes writing feel like a treat.',
     price: '$18',
   },
   {
     name: 'Eucalyptus',
     description: 'Crisp eucalyptus notes to clear your mind before you write.',
+    tagline: 'Why eucalyptus? Sharp and invigorating — perfect for morning pages.',
     price: '$18',
   },
 ]
@@ -44,17 +47,41 @@ function App() {
         </a>
       </section>
 
+      <section className="about" id="about">
+        <h2>Our Mission</h2>
+        <p>
+          ecoEntries makes journals for people who care about what they write in
+          as much as what they write. Every journal is crafted from recycled
+          paper, naturally scented, and fully biodegradable — so your ideas
+          leave a mark, not a footprint.
+        </p>
+        <p>
+          We're a small, student-run brand built around one belief:
+          sustainability shouldn't be a compromise. From sourcing to
+          packaging, every choice is made with the planet in mind.
+        </p>
+      </section>
+
       <section className="products" id="products">
         <h2>Our Journals</h2>
         <div className="product-grid">
           {journals.map((journal) => (
             <article className="product-card" key={journal.name}>
               <div className="product-image" aria-hidden="true">
+                <span className="coming-soon-badge">Coming soon</span>
                 <span>Photo coming soon</span>
               </div>
-              <h3>{journal.name}</h3>
-              <p>{journal.description}</p>
-              <p className="price">{journal.price}</p>
+              <div className="product-card-body">
+                <div className="product-card-heading">
+                  <h3>{journal.name}</h3>
+                  <p className="price">{journal.price}</p>
+                </div>
+                <p className="description">{journal.description}</p>
+                <p className="tagline">{journal.tagline}</p>
+                <button type="button" className="notify-btn">
+                  Notify me
+                </button>
+              </div>
             </article>
           ))}
         </div>
