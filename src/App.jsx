@@ -78,9 +78,14 @@ function App() {
                 </div>
                 <p className="description">{journal.description}</p>
                 <p className="tagline">{journal.tagline}</p>
-                <button type="button" className="notify-btn">
+                <a
+                  href={`mailto:ecoentries.yes@gmail.com?subject=${encodeURIComponent(
+                    `Notify me — ${journal.name}`
+                  )}`}
+                  className="notify-btn"
+                >
                   Notify me
-                </button>
+                </a>
               </div>
             </article>
           ))}
