@@ -95,7 +95,7 @@ function App() {
       <footer className="site-footer" id="footer">
         <p className="footer-logo">ecoEntries</p>
         <p>Questions or bulk orders? Reach out anytime.</p>
-        <p>Email: hello@ecoentries.example &middot; Instagram: @ecoentries</p>
+        <p>Email: ecoentries.yes@gmail.com &middot; Instagram: @ecoentries</p>
         <p className="footer-note">
           &copy; {new Date().getFullYear()} ecoEntries. Made by students, for the planet.
         </p>
@@ -105,3 +105,4 @@ function App() {
 }
 
 export default App
+
